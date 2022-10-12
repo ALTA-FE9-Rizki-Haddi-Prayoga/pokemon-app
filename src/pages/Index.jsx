@@ -1,9 +1,17 @@
-import React from 'react'
+import React from "react";
+import { WithRouter } from "../utils/Navigation";
+import Container from "../components/Container";
+import Layout from "../components/Layout";
+import Card from "../components/CardPokemon";
 
 const Index = () => {
   return (
-    <div>Index</div>
-  )
-}
+    <Layout>
+      <Container>
+        <Card/>
+      </Container>
+    </Layout>
+  );
+};
 
-export default Index;
+export default WithRouter(Index);

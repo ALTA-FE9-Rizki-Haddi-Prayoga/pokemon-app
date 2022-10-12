@@ -1,9 +1,16 @@
-import React from 'react'
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div>Navbar</div>
-  )
-}
+    <nav className="sticky top-0 w-full bg-slate-600 px-2 sm:px-4 py-2.5">
+      <div className="container flex justify-center items-center mx-auto">
+        <Link to={"/"}>
+          <h2 className="text-white font-semibold text-xl py-2">Pokemon App</h2>
+        </Link>
+      </div>
+    </nav>
+  );
+};
 
-export default Navbar
+export default Navbar;

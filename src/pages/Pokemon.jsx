@@ -1,4 +1,5 @@
 import React from 'react'
+import { WithRouter } from "../utils/Navigation";
 
 const Pokemon = () => {
   return (
@@ -6,4 +7,4 @@ const Pokemon = () => {
   )
 }
 
-export default Pokemon
+export default WithRouter(Pokemon)
