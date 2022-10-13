@@ -4,7 +4,8 @@ import { WithRouter } from "../utils/Navigation";
 import Navbar from "../components/Navbar";
 import BottomNav from "../components/BottomNav";
 
-import Pokemon from "../assets/pokemon.png"
+import Pokemon from "../assets/pokemon.png";
+import { CgPokemon } from "react-icons/cg";
 
 const PokemonDetail = () => {
   return (
@@ -23,19 +24,33 @@ const PokemonDetail = () => {
           </section>
           <section className="border m-3 xl:w-[690px] lg:w-[480px] md:w-[360px] sm:w-12 p-4 rounded-lg">
             <div className="grid grid-flow-row auto-rows-max gap-2">
-              <h2 className="text-sky-400 text-lg text-center font-semibold">Stat Pokemon</h2>
+              <h2 className="text-sky-400 text-lg text-center font-semibold">
+                Stat Pokemon
+              </h2>
               <p className="text-green-400 font-medium text-base">HP : 70</p>
-              <p className="text-orange-400 font-medium text-base">Attack : 40</p>
-              <p className="text-green-600 font-medium text-base">Defense : 60</p>
+              <p className="text-orange-400 font-medium text-base">
+                Attack : 40
+              </p>
+              <p className="text-green-600 font-medium text-base">
+                Defense : 60
+              </p>
               <p className="text-sky-500 font-medium text-base">Speed : 42</p>
             </div>
           </section>
           <section className="border m-3 xl:w-[690px] lg:w-[480px] md:w-[360px] sm:w-12 p-4 rounded-lg">
             <div className="grid grid-flow-row auto-rows-max gap-2">
-              <h2 className="text-sky-400 text-lg text-center font-semibold">Moves Pokemon</h2>
+              <h2 className="text-sky-400 text-lg text-center font-semibold">
+                Moves Pokemon
+              </h2>
               <p className="text-white text-base">Wind Move</p>
             </div>
           </section>
+          <div className="flex justify-center mt-8">
+            <button className="ml-3 flex text-white text-sm font-medium  bg-sky-500 p-3 rounded-lg">
+              <CgPokemon className="text-xl mr-1"/>
+              Catch Pokemon
+            </button>
+          </div>
         </div>
         <BottomNav className="sticky bottom-0" />
       </div>
