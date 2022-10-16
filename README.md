@@ -1,5 +1,7 @@
 ### Build a web app using React.js that has 3 pages, Pokemon List, Pokemon Detail, and My Pokemon List. Web app UI/UX should be mobile-first and follow requirements.
 
+### Link Deployment: pokemon-app-mongvie.vercel.app
+
 ### List Task:
 1. Using APIs from https://pokeapi.co/
 2. Screen:
