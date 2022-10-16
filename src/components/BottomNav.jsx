@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
 import { RiHome5Fill } from "react-icons/ri";
 import { MdCatchingPokemon } from "react-icons/md";
 
 const BottomNav = () => {
   return (
-    <nav className="w-full sticky bottom-0 mt-12 bg-sky-800 px-2 sm:px-4 py-2.5">
+    <nav className="w-full sticky bottom-0 mt-8 bg-sky-800 px-2 sm:px-4 py-2.5">
       <div className="grid grid-flow-row auto-rows-max py-1 grid-cols-2">
         <Link to={'/'}>
           <a href="#icon" className="text-white flex flex-col items-center text-xs">

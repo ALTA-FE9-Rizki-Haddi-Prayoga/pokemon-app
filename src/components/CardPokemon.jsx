@@ -1,29 +1,42 @@
 import React from "react";
-import { AiOutlineClose } from "react-icons/ai";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 
-import Pokemon from "../assets/pokemon.png"
+const Card = (props) => {
+  const [pokemonIndex, setPokemonIndex] = useState("");
+  const [name, setName] = useState("");
 
-const CardPokemon = () => {
+  useEffect(() => {
+    setPokemon();
+  }, []);
+
+  const setPokemon = () => {
+    const { name, url } = props;
+    const pokemonIndex = url.split("/")[url.split("/").length - 2];
+
+    setPokemonIndex(pokemonIndex);
+    setName(name);
+  };
+
   return (
-    <div className="ml-3 border-2 w-56 rounded-2xl shadow-lg">
-      <div className="flex justify-end"> 
-        <AiOutlineClose
-          className="w-8 h-6 mt-1 text-white justify-items-end"
-        />
-      </div>
-      <Link to={`/pokemon`}>
-        <a href="#kosong">
-          <div className="flex justify-center">
-            <img src={Pokemon} alt="Gambar"/>
+    <div>
+      <div className="mx-2 border-2 w-56 rounded-2xl shadow-lg">
+        <div className="text-center flex flex-col justify-center h-full">
+          <img
+            onClick={props.onNavigate}
+            alt=""
+            className="w-full h-32"
+            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemonIndex}.svg`}
+          />
+          <div
+            onClick={props.onNavigate}
+            className="text-xs text-white text-center font-bold tracking-widest bg-sky-800 rounded-b-lg dark:rounded-b-xl py-2"
+          >
+            {props.name}
           </div>
-          <p className="font-arcade text-xs text-white text-center font-bold tracking-widest bg-sky-800 rounded-b-lg dark:rounded-b-xl py-2">
-            Pikachu
-          </p>
-        </a>
-      </Link>
+        </div>
+      </div>
     </div>
   );
 };
 
-export default CardPokemon;
+export default Card;

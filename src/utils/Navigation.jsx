@@ -8,6 +8,5 @@ export const WithRouter = (Component) => {
 
     return <Component {...props} navigate={navigate} params={params} />;
   };
-
   return Wrapper;
 };
